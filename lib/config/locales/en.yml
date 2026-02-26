@@ -16,7 +16,7 @@ en:
       You have %{count} When steps when you should only have one.
       Be careful not to add And steps following a When.
     avoid_single_character_tags: >-
-      Avoid using single character tag names. Tags should have meaning.
+      Avoid using single character tags. Tags should have meaning.
     avoid_splat_steps_in_background: >-
       The Background contains a splat step. It should only contain named steps.
     avoid_splat_steps_in_scenarios: >-
