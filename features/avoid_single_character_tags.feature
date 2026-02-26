@@ -1,4 +1,4 @@
-@avoid_single_name_tags
+@avoid_single_character_tags
 Feature: Avoid single string tag names
 
   As a tester
@@ -6,9 +6,9 @@ Feature: Avoid single string tag names
   So that I can have more meaningful tags
 
   Background:
-    Given chutney is configured with the linter "Chutney::AvoidSingleStringTagNames"
+    Given chutney is configured with the linter "Chutney::AvoidSingleCharacterTags"
 
-  Scenario: Avoid single string tag names
+  Scenario: Avoid single character tags
     And a feature file contains:
       """
       @t
@@ -19,13 +19,13 @@ Feature: Avoid single string tag names
     Then 1 issue is raised
     And the message is:
       """
-      Avoid using single string tag names. Tags should have meaning.
+      Avoid using single character tags. Tags should have meaning.
       """
     And it is reported on:
       | line | column |
       | 2    | 1      |
 
-  Scenario: Avoid single string tag names: 2 singular letter tags
+  Scenario: Avoid single character tags: 2 singular letter tags
     And a feature file contains:
       """
       @a @b
@@ -36,13 +36,13 @@ Feature: Avoid single string tag names
     Then 1 issue is raised
     And the message is:
       """
-      Avoid using single string tag names. Tags should have meaning.
+      Avoid using single character tags. Tags should have meaning.
       """
     And it is reported on:
       | line | column |
       | 2    | 1      |
 
-  Scenario: Avoid single string tag names: Normal tag
+  Scenario: Avoid single character tags: Normal tag
     And a feature file contains:
       """
       @tag
