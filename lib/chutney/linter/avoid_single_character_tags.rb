@@ -2,7 +2,6 @@
 
 module Chutney
   # service class to lint for single character tags, such as @t
-
   class AvoidSingleCharacterTags < Linter
     def lint
       scenarios do |feature, scenario|
